@@ -43,7 +43,7 @@ git switch -c <下方对应的任务分支>
 ## 三、B01｜彭意涵：修正主题检索并提供响应样例
 
 分支：feat/b01-topic-retrieval
-状态：未开始；根因已有只读诊断证据。
+状态：进行中；检索修复与三类响应样例已交付，待前端联调及教学问答验收。
 入口：src/retriever/hybrid_retriever.py、
 tests/test_retrieve.py、src/reviewer/source_checker.py。
 
@@ -51,14 +51,18 @@ tests/test_retrieve.py、src/reviewer/source_checker.py。
 轻量召回分数饱和到0.99，同分按原顺序截取，主题材料被排除。
 
 操作顺序：
-- [ ] 新增回归：查询“遵义会议后的思想政治教育有哪些作用？”
+- [x] 新增回归：查询“遵义会议后的思想政治教育有哪些作用？”
       时，前三条包含chunk_sizheng_v1_111；先确认旧代码失败。
-- [ ] 增加“遵义会议”的短问题对照，防止只修复固定长句。
-- [ ] 给出最小修改diff并获批准，再修改实体权重或排序逻辑。
+- [x] 增加“遵义会议”的短问题对照，防止只修复固定长句。
+- [x] 给出最小修改diff并获批准，再修改实体权重或排序逻辑。
 - [ ] 检查“长征形成了什么精神”的结果与原文是否切题。
-- [ ] 验证泛化问题和原有主题不退化，不针对题目硬编码证据ID。
-- [ ] 从真实后端保存成功、待复核、阻断三类响应样例；
+- [x] 验证泛化问题和原有主题不退化，不针对题目硬编码证据ID。
+- [x] 从真实后端保存成功、待复核、阻断三类响应样例；
       记录请求、运行模式、生成方式及触发条件。
+
+验证证据：[PR #2](https://github.com/upstream1119/zhizheng-sizheng-cmit-2026/pull/2)；
+[B01说明](https://github.com/upstream1119/zhizheng-sizheng-cmit-2026/blob/feat/b01-topic-retrieval/docs/acceptance/b01_retrieval_notes.md)。
+后端106项测试通过；三类真实响应通过前端契约校验。
 
 交付：
 - 代码与回归测试PR。
