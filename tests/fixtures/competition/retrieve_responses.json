@@ -1,0 +1,1882 @@
+{
+  "metadata": {
+    "generated_at": "2026-10-08T13:43:16.731303+00:00",
+    "source_commit": "30056d2a55ebdd73d5d267dbf75ce8836096f9ea",
+    "endpoint": "/retrieve",
+    "transport": "FastAPI TestClient / ASGI（进程内真实后端）",
+    "retrieve_mode": "mock",
+    "local_mock_ack": "1",
+    "vector_backend": "unset（本地轻量召回）",
+    "generator_mode": "template",
+    "limitations": "本地检索与模板证据摘要；非在线模型，非浏览器端到端验收。"
+  },
+  "samples": [
+    {
+      "request": {
+        "query": "遵义会议后的思想政治教育有哪些作用？",
+        "target_grade": "university"
+      },
+      "response": {
+        "status": "success",
+        "project": "多智能体赋能的跨模态零幻觉交互式思政教育系统",
+        "query": "遵义会议后的思想政治教育有哪些作用？",
+        "query_entities": [
+          "遵义会议",
+          "思想政治教育",
+          "政治教育"
+        ],
+        "vector_hits": [
+          {
+            "id": "chunk_sizheng_v1_111",
+            "source": "中国共产党思想政治教育史",
+            "title": "传达贯彻遵义会议精神",
+            "text": "遵义会议是党和军队历史上一个生死攸关的转折点。遵义会议后，传达遵义会议精神，统一党和部队的思想，是一项紧迫的思想政治教育任务。1935年2月28日，红军第二次占领遵义，在遵义召开团以上干部会议，正式传达了遵义会议精神。此后，红军各军团逐级向下传达。遵义会议的决定，振奋了人心，得到了广大干部战士的衷心拥护。在毛泽东的直接指挥下，红军四渡赤水河，歼敌1.8万余人，使中央红军一改长征以来被动挨打的局面，取得了战略转移的主动权。此后，红军巧渡金沙江，强渡大渡河，飞夺泸定桥，不断取得新的胜利。实践是最好的教育。遵义会议后，以毛泽东为代表的党中央的正确路线逐渐武装了党和红军，奠定了红军长征胜利的思想基础。",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第二章 土地革命时期思想政治教育的艰辛探索 / 第三节 红军反“围剿”斗争和长征中的思想政治教育 / 三、红军长征中的思想政治教育 / （一）加强党的正确路线教育 / 1. 传达贯彻遵义会议精神",
+              "page": 94
+            },
+            "vector_score": 0.95
+          },
+          {
+            "id": "chunk_sizheng_v1_112",
+            "source": "中国共产党思想政治教育史",
+            "title": "清除王明左倾教条主义的错误影响",
+            "text": "遵义会议后，中央发出指示，要求各部队恢复党对红军的集体领导制度，规定各部队的党委，对战略战术的原则问题和红军的行动方针都有权进行讨论，确保党对军队的绝对领导。中央开始纠正王明“左”倾错误所制造的冤案，解放了一大批被错误打击的干部。同时，也开始纠正歧视、打击知识分子的错误倾向。1935年2月1日，中央革命军事委员会发布《关于优待技术人员的指示》，调动了知识分子干部的革命积极性。纠正“左”倾错误，促进了革命队伍的团结。",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第二章 土地革命时期思想政治教育的艰辛探索 / 第三节 红军反“围剿”斗争和长征中的思想政治教育 / 三、红军长征中的思想政治教育 / （一）加强党的正确路线教育 / 2. 清除王明“左”倾教条主义的错误影响",
+              "page": 95
+            },
+            "vector_score": 0.63
+          },
+          {
+            "id": "chunk_sizheng_v1_117",
+            "source": "中国共产党思想政治教育史",
+            "title": "宣传党的民族政策，争取少数民族群众支持",
+            "text": "红军在所经过的瑶、苗、彝、藏、回等少数民族地区，广泛宣传党的反对民族压迫、各民族一律平等的政策，积极争取少数民族上层人物和普通群众的支持。遵义会议后，总政治部在1935年1月19日再次发布《关于争取少数民族的指示》，强调争取少数民族的重要意义，指出要严格政治纪律，绝对禁止对少数民族骚扰；要尊重少数民族的风俗习惯和宗教信仰，反对轻视少数民族的大汉族主义；要开展对少数民族群众的宣传教育，争取少数民族群众加入红军，并注意培养少数民族干部。同年5月，刘伯承率领红军先遣支队进入四川拖乌彝族聚居区，开展宣传活动。刘伯承与彝族沽鸡部落首领小叶丹歃血为盟，结为兄弟，并成立了中国工农红军彝民沽鸡支队，扩大了党和红军的影响。红军长征创造了前所未有的英雄业绩，在中国革命斗争史上写下了最光辉的篇章。毛泽东指出：长征是宣言书，长征是宣传队，长征是播种机。红军以不怕困难、不怕牺牲，敢于克服任何艰难险阻、敢于压倒一切敌人的革命英雄主义气概和革命乐观主义态度，谱写了一曲曲壮丽的凯歌。长征中红军的思想政治教育发挥了巨大威力，也经受住了严峻的考验，形成了永垂史册的长征精神，无愧于“红军的生命线”。",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第二章 土地革命时期思想政治教育的艰辛探索 / 第三节 红军反“围剿”斗争和长征中的思想政治教育 / 三、红军长征中的思想政治教育 / （三）认真做好长征沿途群众的宣传工作 / 2. 宣传党的民族政策，争取少数民族群众支持",
+              "page": 97
+            },
+            "vector_score": 0.63
+          }
+        ],
+        "graph_hits": [
+          {
+            "id": "chunk_sizheng_v1_001",
+            "related_entities": [
+              "思想政治教育",
+              "政治教育",
+              "中国共产党人",
+              "马克思主义",
+              "中国共产党",
+              "马克思主义和党的方针政策",
+              "人民当家作主的新中国"
+            ],
+            "graph_paths": [
+              {
+                "from": "思想政治教育",
+                "to": "中国共产党人",
+                "hops": 1,
+                "path": [
+                  "思想政治教育",
+                  "中国共产党人"
+                ],
+                "relations": [
+                  "关联"
+                ],
+                "path_text": "思想政治教育 --关联--> 中国共产党人",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_001"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "中国共产党人",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_001"
+                    ],
+                    "original_direction": false
+                  }
+                ]
+              },
+              {
+                "from": "思想政治教育",
+                "to": "马克思主义",
+                "hops": 1,
+                "path": [
+                  "思想政治教育",
+                  "马克思主义"
+                ],
+                "relations": [
+                  "以其为指导思想"
+                ],
+                "path_text": "思想政治教育 --以其为指导思想--> 马克思主义",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_032"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "马克思主义",
+                    "relation": "以其为指导思想",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "思想政治教育",
+                "to": "中国共产党",
+                "hops": 1,
+                "path": [
+                  "思想政治教育",
+                  "中国共产党"
+                ],
+                "relations": [
+                  "由其领导"
+                ],
+                "path_text": "思想政治教育 --由其领导--> 中国共产党",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_032"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "中国共产党",
+                    "relation": "由其领导",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "思想政治教育",
+                "to": "马克思主义和党的方针政策",
+                "hops": 2,
+                "path": [
+                  "思想政治教育",
+                  "中国共产党人",
+                  "马克思主义和党的方针政策"
+                ],
+                "relations": [
+                  "关联",
+                  "宣传"
+                ],
+                "path_text": "思想政治教育 --关联--> 中国共产党人 --宣传--> 马克思主义和党的方针政策",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_001"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "中国共产党人",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_001"
+                    ],
+                    "original_direction": false
+                  },
+                  {
+                    "source": "中国共产党人",
+                    "target": "马克思主义和党的方针政策",
+                    "relation": "宣传",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_001"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "思想政治教育",
+                "to": "人民当家作主的新中国",
+                "hops": 2,
+                "path": [
+                  "思想政治教育",
+                  "中国共产党人",
+                  "人民当家作主的新中国"
+                ],
+                "relations": [
+                  "关联",
+                  "建立"
+                ],
+                "path_text": "思想政治教育 --关联--> 中国共产党人 --建立--> 人民当家作主的新中国",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_001"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "中国共产党人",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_001"
+                    ],
+                    "original_direction": false
+                  },
+                  {
+                    "source": "中国共产党人",
+                    "target": "人民当家作主的新中国",
+                    "relation": "建立",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_001"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              }
+            ],
+            "graph_score": 0.981
+          },
+          {
+            "id": "chunk_sizheng_v1_002",
+            "related_entities": [
+              "思想政治教育",
+              "政治教育",
+              "马克思主义",
+              "中国共产党",
+              "工人运动"
+            ],
+            "graph_paths": [
+              {
+                "from": "思想政治教育",
+                "to": "马克思主义",
+                "hops": 1,
+                "path": [
+                  "思想政治教育",
+                  "马克思主义"
+                ],
+                "relations": [
+                  "以其为指导思想"
+                ],
+                "path_text": "思想政治教育 --以其为指导思想--> 马克思主义",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_032"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "马克思主义",
+                    "relation": "以其为指导思想",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "思想政治教育",
+                "to": "中国共产党",
+                "hops": 1,
+                "path": [
+                  "思想政治教育",
+                  "中国共产党"
+                ],
+                "relations": [
+                  "由其领导"
+                ],
+                "path_text": "思想政治教育 --由其领导--> 中国共产党",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_032"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "中国共产党",
+                    "relation": "由其领导",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "思想政治教育",
+                "to": "中国共产党",
+                "hops": 2,
+                "path": [
+                  "思想政治教育",
+                  "马克思主义",
+                  "中国共产党"
+                ],
+                "relations": [
+                  "以其为指导思想",
+                  "关联"
+                ],
+                "path_text": "思想政治教育 --以其为指导思想--> 马克思主义 --关联--> 中国共产党",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_032",
+                  "chunk_sizheng_v1_028"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "马克思主义",
+                    "relation": "以其为指导思想",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": true
+                  },
+                  {
+                    "source": "马克思主义",
+                    "target": "中国共产党",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_028"
+                    ],
+                    "original_direction": false
+                  }
+                ]
+              },
+              {
+                "from": "思想政治教育",
+                "to": "工人运动",
+                "hops": 2,
+                "path": [
+                  "思想政治教育",
+                  "中国共产党",
+                  "工人运动"
+                ],
+                "relations": [
+                  "由其领导",
+                  "发动和领导"
+                ],
+                "path_text": "思想政治教育 --由其领导--> 中国共产党 --发动和领导--> 工人运动",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_032",
+                  "chunk_sizheng_v1_021"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "中国共产党",
+                    "relation": "由其领导",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": true
+                  },
+                  {
+                    "source": "中国共产党",
+                    "target": "工人运动",
+                    "relation": "发动和领导",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_021"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "思想政治教育",
+                "to": "马克思主义",
+                "hops": 2,
+                "path": [
+                  "思想政治教育",
+                  "中国共产党",
+                  "马克思主义"
+                ],
+                "relations": [
+                  "由其领导",
+                  "以其为行动指南"
+                ],
+                "path_text": "思想政治教育 --由其领导--> 中国共产党 --以其为行动指南--> 马克思主义",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_032",
+                  "chunk_sizheng_v1_028"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "中国共产党",
+                    "relation": "由其领导",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": true
+                  },
+                  {
+                    "source": "中国共产党",
+                    "target": "马克思主义",
+                    "relation": "以其为行动指南",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_028"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              }
+            ],
+            "graph_score": 0.981
+          },
+          {
+            "id": "chunk_sizheng_v1_006",
+            "related_entities": [
+              "思想政治教育",
+              "政治教育",
+              "马克思主义",
+              "中国共产党",
+              "工人运动"
+            ],
+            "graph_paths": [
+              {
+                "from": "思想政治教育",
+                "to": "马克思主义",
+                "hops": 1,
+                "path": [
+                  "思想政治教育",
+                  "马克思主义"
+                ],
+                "relations": [
+                  "以其为指导思想"
+                ],
+                "path_text": "思想政治教育 --以其为指导思想--> 马克思主义",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_032"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "马克思主义",
+                    "relation": "以其为指导思想",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "思想政治教育",
+                "to": "中国共产党",
+                "hops": 1,
+                "path": [
+                  "思想政治教育",
+                  "中国共产党"
+                ],
+                "relations": [
+                  "由其领导"
+                ],
+                "path_text": "思想政治教育 --由其领导--> 中国共产党",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_032"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "中国共产党",
+                    "relation": "由其领导",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "思想政治教育",
+                "to": "中国共产党",
+                "hops": 2,
+                "path": [
+                  "思想政治教育",
+                  "马克思主义",
+                  "中国共产党"
+                ],
+                "relations": [
+                  "以其为指导思想",
+                  "关联"
+                ],
+                "path_text": "思想政治教育 --以其为指导思想--> 马克思主义 --关联--> 中国共产党",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_032",
+                  "chunk_sizheng_v1_028"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "马克思主义",
+                    "relation": "以其为指导思想",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": true
+                  },
+                  {
+                    "source": "马克思主义",
+                    "target": "中国共产党",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_028"
+                    ],
+                    "original_direction": false
+                  }
+                ]
+              },
+              {
+                "from": "思想政治教育",
+                "to": "工人运动",
+                "hops": 2,
+                "path": [
+                  "思想政治教育",
+                  "中国共产党",
+                  "工人运动"
+                ],
+                "relations": [
+                  "由其领导",
+                  "发动和领导"
+                ],
+                "path_text": "思想政治教育 --由其领导--> 中国共产党 --发动和领导--> 工人运动",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_032",
+                  "chunk_sizheng_v1_021"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "中国共产党",
+                    "relation": "由其领导",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": true
+                  },
+                  {
+                    "source": "中国共产党",
+                    "target": "工人运动",
+                    "relation": "发动和领导",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_021"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "思想政治教育",
+                "to": "马克思主义",
+                "hops": 2,
+                "path": [
+                  "思想政治教育",
+                  "中国共产党",
+                  "马克思主义"
+                ],
+                "relations": [
+                  "由其领导",
+                  "以其为行动指南"
+                ],
+                "path_text": "思想政治教育 --由其领导--> 中国共产党 --以其为行动指南--> 马克思主义",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_032",
+                  "chunk_sizheng_v1_028"
+                ],
+                "edges": [
+                  {
+                    "source": "思想政治教育",
+                    "target": "中国共产党",
+                    "relation": "由其领导",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": true
+                  },
+                  {
+                    "source": "中国共产党",
+                    "target": "马克思主义",
+                    "relation": "以其为行动指南",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_028"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              }
+            ],
+            "graph_score": 0.981
+          }
+        ],
+        "hybrid_hits": [
+          {
+            "id": "chunk_sizheng_v1_111",
+            "source": "中国共产党思想政治教育史",
+            "title": "传达贯彻遵义会议精神",
+            "text": "遵义会议是党和军队历史上一个生死攸关的转折点。遵义会议后，传达遵义会议精神，统一党和部队的思想，是一项紧迫的思想政治教育任务。1935年2月28日，红军第二次占领遵义，在遵义召开团以上干部会议，正式传达了遵义会议精神。此后，红军各军团逐级向下传达。遵义会议的决定，振奋了人心，得到了广大干部战士的衷心拥护。在毛泽东的直接指挥下，红军四渡赤水河，歼敌1.8万余人，使中央红军一改长征以来被动挨打的局面，取得了战略转移的主动权。此后，红军巧渡金沙江，强渡大渡河，飞夺泸定桥，不断取得新的胜利。实践是最好的教育。遵义会议后，以毛泽东为代表的党中央的正确路线逐渐武装了党和红军，奠定了红军长征胜利的思想基础。",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第二章 土地革命时期思想政治教育的艰辛探索 / 第三节 红军反“围剿”斗争和长征中的思想政治教育 / 三、红军长征中的思想政治教育 / （一）加强党的正确路线教育 / 1. 传达贯彻遵义会议精神",
+              "page": 94
+            },
+            "vector_score": 0.95,
+            "graph_score": 0.0,
+            "related_entities": [],
+            "graph_paths": [],
+            "hybrid_score": 0.665
+          },
+          {
+            "id": "chunk_sizheng_v1_112",
+            "source": "中国共产党思想政治教育史",
+            "title": "清除王明左倾教条主义的错误影响",
+            "text": "遵义会议后，中央发出指示，要求各部队恢复党对红军的集体领导制度，规定各部队的党委，对战略战术的原则问题和红军的行动方针都有权进行讨论，确保党对军队的绝对领导。中央开始纠正王明“左”倾错误所制造的冤案，解放了一大批被错误打击的干部。同时，也开始纠正歧视、打击知识分子的错误倾向。1935年2月1日，中央革命军事委员会发布《关于优待技术人员的指示》，调动了知识分子干部的革命积极性。纠正“左”倾错误，促进了革命队伍的团结。",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第二章 土地革命时期思想政治教育的艰辛探索 / 第三节 红军反“围剿”斗争和长征中的思想政治教育 / 三、红军长征中的思想政治教育 / （一）加强党的正确路线教育 / 2. 清除王明“左”倾教条主义的错误影响",
+              "page": 95
+            },
+            "vector_score": 0.63,
+            "graph_score": 0.0,
+            "related_entities": [],
+            "graph_paths": [],
+            "hybrid_score": 0.441
+          },
+          {
+            "id": "chunk_sizheng_v1_117",
+            "source": "中国共产党思想政治教育史",
+            "title": "宣传党的民族政策，争取少数民族群众支持",
+            "text": "红军在所经过的瑶、苗、彝、藏、回等少数民族地区，广泛宣传党的反对民族压迫、各民族一律平等的政策，积极争取少数民族上层人物和普通群众的支持。遵义会议后，总政治部在1935年1月19日再次发布《关于争取少数民族的指示》，强调争取少数民族的重要意义，指出要严格政治纪律，绝对禁止对少数民族骚扰；要尊重少数民族的风俗习惯和宗教信仰，反对轻视少数民族的大汉族主义；要开展对少数民族群众的宣传教育，争取少数民族群众加入红军，并注意培养少数民族干部。同年5月，刘伯承率领红军先遣支队进入四川拖乌彝族聚居区，开展宣传活动。刘伯承与彝族沽鸡部落首领小叶丹歃血为盟，结为兄弟，并成立了中国工农红军彝民沽鸡支队，扩大了党和红军的影响。红军长征创造了前所未有的英雄业绩，在中国革命斗争史上写下了最光辉的篇章。毛泽东指出：长征是宣言书，长征是宣传队，长征是播种机。红军以不怕困难、不怕牺牲，敢于克服任何艰难险阻、敢于压倒一切敌人的革命英雄主义气概和革命乐观主义态度，谱写了一曲曲壮丽的凯歌。长征中红军的思想政治教育发挥了巨大威力，也经受住了严峻的考验，形成了永垂史册的长征精神，无愧于“红军的生命线”。",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第二章 土地革命时期思想政治教育的艰辛探索 / 第三节 红军反“围剿”斗争和长征中的思想政治教育 / 三、红军长征中的思想政治教育 / （三）认真做好长征沿途群众的宣传工作 / 2. 宣传党的民族政策，争取少数民族群众支持",
+              "page": 97
+            },
+            "vector_score": 0.63,
+            "graph_score": 0.0,
+            "related_entities": [],
+            "graph_paths": [],
+            "hybrid_score": 0.441
+          }
+        ],
+        "answer": "生成服务当前不可用，以下内容仅为检索证据摘要，不作为完整自然语言回答：\n- 证据 1：遵义会议是党和军队历史上一个生死攸关的转折点。遵义会议后，传达遵义会议精神，统一党和部队的思想，是一项紧迫的思想政治教育任务。1935年2月28日，红军第二次占领遵义，在遵义召开团以上干部会议，正式传达了遵义会议精神。此后，红军各军团逐级向下传达。遵义会议的决定，振奋了人心，得到了广大干部战士的衷心拥护。在毛泽东的直接指挥下，红军四渡赤水河，歼敌1.8万余人，使中央红军一改长征以来被动挨打的局面，取得了战略转移的主动权。此后，红军巧渡金沙江，强渡大渡河，飞夺泸定桥，不断取得新的胜利。实践是最好的教育。遵义会议后，以毛泽东为代表的党中央的正确路线逐渐武装了党和红军，奠定了红军长征胜利的思想基础。\n- 证据 2：红军在所经过的瑶、苗、彝、藏、回等少数民族地区，广泛宣传党的反对民族压迫、各民族一律平等的政策，积极争取少数民族上层人物和普通群众的支持。遵义会议后，总政治部在1935年1月19日再次发布《关于争取少数民族的指示》，强调争取少数民族的重要意义，指出要严格政治纪律，绝对禁止对少数民族骚扰；要尊重少数民族的风俗习惯和宗教信仰，反对轻视少数民族的大汉族主义；要开展对少数民族群众的宣传教育，争取少数民族群众加入红军，并注意培养少数民族干部。同年5月，刘伯承率领红军先遣支队进入四川拖乌彝族聚居区，开展宣传活动。刘伯承与彝族沽鸡部落首领小叶丹歃血为盟，结为兄弟，并成立了中国工农红军彝民沽鸡支队，扩大了党和红军的影响。\n\n引用依据：\n1. 传达贯彻遵义会议精神：来源：《中国共产党思想政治教育史》，第二章 土地革命时期思想政治教育的艰辛探索 / 第三节 红军反“围剿”斗争和长征中的思想政治教育 / 三、红军长征中的思想政治教育 / （一）加强党的正确路线教育 / 1. 传达贯彻遵义会议精神，PDF 页码 94\n2. 宣传党的民族政策，争取少数民族群众支持：来源：《中国共产党思想政治教育史》，第二章 土地革命时期思想政治教育的艰辛探索 / 第三节 红军反“围剿”斗争和长征中的思想政治教育 / 三、红军长征中的思想政治教育 / （三）认真做好长征沿途群众的宣传工作 / 2. 宣传党的民族政策，争取少数民族群众支持，PDF 页码 97\n\n以上内容仅依据当前检索到的证据整理，仅为检索证据摘要，请在生成服务恢复后重新生成完整回答。",
+        "citations_used": [
+          {
+            "id": "chunk_sizheng_v1_111",
+            "title": "传达贯彻遵义会议精神",
+            "source": "中国共产党思想政治教育史",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第二章 土地革命时期思想政治教育的艰辛探索 / 第三节 红军反“围剿”斗争和长征中的思想政治教育 / 三、红军长征中的思想政治教育 / （一）加强党的正确路线教育 / 1. 传达贯彻遵义会议精神",
+              "page": 94
+            },
+            "hybrid_score": 0.665
+          },
+          {
+            "id": "chunk_sizheng_v1_117",
+            "title": "宣传党的民族政策，争取少数民族群众支持",
+            "source": "中国共产党思想政治教育史",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第二章 土地革命时期思想政治教育的艰辛探索 / 第三节 红军反“围剿”斗争和长征中的思想政治教育 / 三、红军长征中的思想政治教育 / （三）认真做好长征沿途群众的宣传工作 / 2. 宣传党的民族政策，争取少数民族群众支持",
+              "page": 97
+            },
+            "hybrid_score": 0.441
+          }
+        ],
+        "generator_mode": "template",
+        "generator_provider": "template",
+        "provider_status": "template_evidence_summary",
+        "used_fallback": true,
+        "source_check": {
+          "status": "pass",
+          "issues": [],
+          "checked_citation_count": 2
+        },
+        "policy_check": {
+          "status": "pass",
+          "risk_types": [],
+          "issues": [],
+          "review_required": false,
+          "max_severity": "none",
+          "review_items": [],
+          "suggestion": "建议保留研究生初标与赵老师抽样校准机制。",
+          "feedback_collection": {
+            "stage": "rule_seed",
+            "recommended_reviewer": "低风险样例由研究生或组员初标，高风险和争议样例交赵老师校准。",
+            "expert_review_priority": "normal",
+            "review_dimensions": [
+              {
+                "id": "evidence_alignment",
+                "name": "证据支撑",
+                "description": "判断回答中的结论是否能被当前 citation 证据支撑。"
+              },
+              {
+                "id": "citation_integrity",
+                "name": "溯源完整性",
+                "description": "判断 citation 的文献、章节、页码是否足够完整。"
+              },
+              {
+                "id": "expression_safety",
+                "name": "表述稳妥性",
+                "description": "判断是否存在绝对化、扩大化或不够严谨的政治表述。"
+              },
+              {
+                "id": "historical_context",
+                "name": "历史语境",
+                "description": "判断回答是否交代清楚历史阶段、对象和语境。"
+              },
+              {
+                "id": "mobilization_completeness",
+                "name": "政治动员完整性",
+                "description": "判断政治动员、鼓舞士气等回答是否覆盖理想信念、组织纪律、宣传鼓动和生活关怀等必要维度。"
+              },
+              {
+                "id": "expert_feedback",
+                "name": "专家反馈",
+                "description": "记录赵老师或研究生标注时关注的审查理由。"
+              }
+            ],
+            "label_options": [
+              "通过",
+              "证据不足",
+              "表述不够稳妥",
+              "历史语境不清",
+              "政治动员维度不全",
+              "结论超出材料",
+              "需要专家复核"
+            ],
+            "decision_options": [
+              "通过",
+              "需要修改",
+              "需要专家复核",
+              "不能输出"
+            ],
+            "required_fields": [
+              "decision",
+              "reason",
+              "corrected_suggestion"
+            ]
+          }
+        },
+        "agent_trace": [
+          {
+            "agent": "retrieval_stage",
+            "role": "证据检索中枢",
+            "status": "pass",
+            "summary": {
+              "query_entities_count": 3,
+              "hybrid_hits_count": 3
+            }
+          },
+          {
+            "agent": "generator",
+            "role": "生成智能体",
+            "status": "pass",
+            "summary": {
+              "generator_mode": "template",
+              "citations_used_count": 2
+            }
+          },
+          {
+            "agent": "source_reviewer",
+            "role": "溯源审查智能体",
+            "status": "pass",
+            "summary": {
+              "checked_citation_count": 2,
+              "issue_count": 0
+            }
+          },
+          {
+            "agent": "policy_reviewer",
+            "role": "政治红线审查智能体",
+            "status": "pass",
+            "summary": {
+              "review_required": false,
+              "max_severity": "none",
+              "risk_types": []
+            }
+          }
+        ],
+        "final_decision": {
+          "status": "approved",
+          "can_output": true,
+          "review_required": false,
+          "reason": "溯源检查和政治红线初筛均通过。"
+        },
+        "display_route": {
+          "intent_type": "knowledge_qa",
+          "target_grade": "university",
+          "presentation_mode": "evidence_cards",
+          "timeline_ids": [],
+          "landmark_ids": [],
+          "narrative_character": null
+        }
+      }
+    },
+    {
+      "request": {
+        "query": "抗日战争时期党的干部教育为什么重要？",
+        "target_grade": "university"
+      },
+      "response": {
+        "status": "success",
+        "project": "多智能体赋能的跨模态零幻觉交互式思政教育系统",
+        "query": "抗日战争时期党的干部教育为什么重要？",
+        "query_entities": [
+          "干部教育",
+          "抗日战争"
+        ],
+        "vector_hits": [
+          {
+            "id": "chunk_sizheng_v1_143",
+            "source": "中国共产党思想政治教育史",
+            "title": "加强党员干部的思想政治教育",
+            "text": "抗日战争时期的党员干部教育，在中国共产党思想政治教育史上占有极其重要的地位。中国共产党颁布了一系列重要文件，在全党范围内开展整风运动，创办了中共中央党校、抗日军政大学、陕北公学等干部教育学校，开展干部学校教育。同时，把在职干部教育放在首位。党的领导人身体力行、著书立说，投身到教育党员干部的工作之中，毛泽东的《反对自由主义》《纪念白求恩》《为人民服务》，刘少奇的《论共产党员的修养》，陈云的《怎样做一个共产党员》等，成为教育党员干部的好教材。抗日战争时期，中国共产党培养了数以百万计的高素质党员干部，为赢得抗日战争乃至解放战争的胜利提供了根本保证。",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第三章 抗日战争时期思想政治教育的日趋成熟 / 第二节 加强党员干部的思想政治教育",
+              "page": 114
+            },
+            "vector_score": 0.99
+          },
+          {
+            "id": "chunk_sizheng_v1_148",
+            "source": "中国共产党思想政治教育史",
+            "title": "抗日战争时期党的干部教育",
+            "text": "毛泽东指出：“政治路线确定之后，干部就是决定的因素。”因此，在抗日战争时期，中国共产党特别重视干部教育，把培养教育干部看作是党的重要战略任务，是夺取抗战胜利的重要保证。1937年5月，刘少奇在延安举行的苏区党代表会议上指出：“过去我们的干部，特别是有经验的干部大批牺牲，我们要在最短期内补救这个缺陷，要训练上万的干部。”为此，中共中央于1939年2月成立了干部教育部，由张闻天任部长，李维汉任副部长。党中央和中央军委、军委总政治部，从1940年3月到1942年2月，相继发出《中央关于在职干部教育的指示》《中共中央关于延安干部学校的决定》等一系列干部教育的重要文件。党中央在文件中明确提出：“在目前条件下，干部教育工作，在全部教育工作中的比重，应该是第一位的。”这些文件还规定了干部教育的方针原则和具体措施，对加强抗战时期的干部教育起到了重要的指导作用。在抗战时期的干部教育中，共产主义思想是干部教育的指导思想。1940年1月，毛泽东在《新民主主义论》中指出：“毫无疑义，应该扩大共产主义思想的宣传，加紧马克思列宁主义的学习，没有这种宣传和学习，不但不能引导中国革命到将来的社会主义阶段上去，而且也不能指导现时的民主革命达到胜利。”强调用共产主义思想教育干部，使之具有坚定正确的政治方向，为共产主义而努力奋斗。干部教育的基本内容有四个方面：一是思想教育。毛泽东指出：“掌握思想教育，是团结全党进行伟大政治斗争的中心环节。如果这个任务不解决，党的一切政治任务是不能完成的。”在对干部的思想教育中，首先是要广大干部确立马克思主义的世界观，端正思想路线，强调一切从实际出发，理论联系实际，反对主观主义，特别是教条主义。其次是对干部进行党的宗旨教育，使党员真正从思想上入党，树立全心全意为人民服务的思想。在加强干部的思想教育中，要求大家拿起批评与自我批评的武器，开展积极的思想斗争，不断克服各种非无产阶级思想。",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第三章 抗日战争时期思想政治教育的日趋成熟 / 第二节 加强党员干部的思想政治教育 / 二、抗日战争时期党的干部教育",
+              "page": 117
+            },
+            "vector_score": 0.99
+          },
+          {
+            "id": "chunk_sizheng_v1_149",
+            "source": "中国共产党思想政治教育史",
+            "title": "抗日战争时期党的干部教育（2）",
+            "text": "二是政治教育。党始终把提高干部的政治觉悟放在十分重要的地位。对干部的政治教育首先是进行阶级教育。到了抗日战争的中后期，阶级斗争变得更加突出。为加强对干部的阶级教育，1943年10月，中共中央专门发出了《关于阶级教育的通知》，要求对各级干部毫不放松地有系统地进行阶级教育。其次是进行政策和策略教育。党中央多次发出指示，要求把政策和策略教育“列入干部教育的正式课程，作为成绩考成的重要标准”。同时还加强对干部的时事教育。引导干部及时了解国际、国内发生的重要事件和战争进展等一系列重大问题。三是理论教育。在抗日战争的环境下，由于诸多原因，党的干部队伍的理论修养是很不够的，因此，党中央十分重视干部的理论教育。1942年10月，中共中央强调指出：“理论教育的成败则是革命成败的第一个关键”。抗日战争时期的整风运动，是一次全党范围内的马克思主义理论教育运动，首先是党的高中级干部和一般干部的马克思主义理论教育运动。四是业务教育与文化教育。党中央多次重申，所有干部都必须进行业务教育，实行“做什么，学什么”。与此同时，针对相当多的干部文化水平不高的现状，党中央要求文化程度低的干部，必须进行文化知识的学习，进行识字和读书的工作，不断提高自己的文化知识水平。党对干部业务与文化教育的加强，提高了广大干部的业务能力和文化水平，一大批业务精、政治强的高素质干部全面成长起来。",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第三章 抗日战争时期思想政治教育的日趋成熟 / 第二节 加强党员干部的思想政治教育 / 二、抗日战争时期党的干部教育",
+              "page": 118
+            },
+            "vector_score": 0.99
+          }
+        ],
+        "graph_hits": [
+          {
+            "id": "chunk_sizheng_v1_148",
+            "related_entities": [
+              "干部教育",
+              "抗日战争",
+              "中国共产党",
+              "党的重要战略任务",
+              "抗战胜利",
+              "共产主义思想",
+              "思想教育",
+              "马克思主义",
+              "思想政治教育"
+            ],
+            "graph_paths": [
+              {
+                "from": "干部教育",
+                "to": "中国共产党",
+                "hops": 1,
+                "path": [
+                  "干部教育",
+                  "中国共产党"
+                ],
+                "relations": [
+                  "关联"
+                ],
+                "path_text": "干部教育 --关联--> 中国共产党",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "中国共产党",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": false
+                  }
+                ]
+              },
+              {
+                "from": "干部教育",
+                "to": "党的重要战略任务",
+                "hops": 1,
+                "path": [
+                  "干部教育",
+                  "党的重要战略任务"
+                ],
+                "relations": [
+                  "是"
+                ],
+                "path_text": "干部教育 --是--> 党的重要战略任务",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "党的重要战略任务",
+                    "relation": "是",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "干部教育",
+                "to": "抗战胜利",
+                "hops": 1,
+                "path": [
+                  "干部教育",
+                  "抗战胜利"
+                ],
+                "relations": [
+                  "是重要保证"
+                ],
+                "path_text": "干部教育 --是重要保证--> 抗战胜利",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "抗战胜利",
+                    "relation": "是重要保证",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "干部教育",
+                "to": "共产主义思想",
+                "hops": 1,
+                "path": [
+                  "干部教育",
+                  "共产主义思想"
+                ],
+                "relations": [
+                  "以其为指导思想"
+                ],
+                "path_text": "干部教育 --以其为指导思想--> 共产主义思想",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "共产主义思想",
+                    "relation": "以其为指导思想",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "干部教育",
+                "to": "思想教育",
+                "hops": 1,
+                "path": [
+                  "干部教育",
+                  "思想教育"
+                ],
+                "relations": [
+                  "包括"
+                ],
+                "path_text": "干部教育 --包括--> 思想教育",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "思想教育",
+                    "relation": "包括",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              }
+            ],
+            "graph_score": 0.99
+          },
+          {
+            "id": "chunk_sizheng_v1_143",
+            "related_entities": [
+              "干部教育",
+              "抗日战争",
+              "中国共产党",
+              "思想政治教育"
+            ],
+            "graph_paths": [
+              {
+                "from": "干部教育",
+                "to": "中国共产党",
+                "hops": 1,
+                "path": [
+                  "干部教育",
+                  "中国共产党"
+                ],
+                "relations": [
+                  "关联"
+                ],
+                "path_text": "干部教育 --关联--> 中国共产党",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "中国共产党",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": false
+                  }
+                ]
+              },
+              {
+                "from": "干部教育",
+                "to": "思想政治教育",
+                "hops": 2,
+                "path": [
+                  "干部教育",
+                  "中国共产党",
+                  "思想政治教育"
+                ],
+                "relations": [
+                  "关联",
+                  "关联"
+                ],
+                "path_text": "干部教育 --关联--> 中国共产党 --关联--> 思想政治教育",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148",
+                  "chunk_sizheng_v1_032"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "中国共产党",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": false
+                  },
+                  {
+                    "source": "中国共产党",
+                    "target": "思想政治教育",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": false
+                  }
+                ]
+              }
+            ],
+            "graph_score": 0.942
+          },
+          {
+            "id": "chunk_sizheng_v1_149",
+            "related_entities": [
+              "干部教育",
+              "抗日战争",
+              "马克思主义",
+              "思想政治教育"
+            ],
+            "graph_paths": [
+              {
+                "from": "干部教育",
+                "to": "马克思主义",
+                "hops": 2,
+                "path": [
+                  "干部教育",
+                  "中国共产党",
+                  "马克思主义"
+                ],
+                "relations": [
+                  "关联",
+                  "以其为行动指南"
+                ],
+                "path_text": "干部教育 --关联--> 中国共产党 --以其为行动指南--> 马克思主义",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148",
+                  "chunk_sizheng_v1_028"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "中国共产党",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": false
+                  },
+                  {
+                    "source": "中国共产党",
+                    "target": "马克思主义",
+                    "relation": "以其为行动指南",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_028"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "干部教育",
+                "to": "思想政治教育",
+                "hops": 2,
+                "path": [
+                  "干部教育",
+                  "中国共产党",
+                  "思想政治教育"
+                ],
+                "relations": [
+                  "关联",
+                  "关联"
+                ],
+                "path_text": "干部教育 --关联--> 中国共产党 --关联--> 思想政治教育",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148",
+                  "chunk_sizheng_v1_032"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "中国共产党",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": false
+                  },
+                  {
+                    "source": "中国共产党",
+                    "target": "思想政治教育",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": false
+                  }
+                ]
+              }
+            ],
+            "graph_score": 0.942
+          }
+        ],
+        "hybrid_hits": [
+          {
+            "id": "chunk_sizheng_v1_148",
+            "source": "中国共产党思想政治教育史",
+            "title": "抗日战争时期党的干部教育",
+            "text": "毛泽东指出：“政治路线确定之后，干部就是决定的因素。”因此，在抗日战争时期，中国共产党特别重视干部教育，把培养教育干部看作是党的重要战略任务，是夺取抗战胜利的重要保证。1937年5月，刘少奇在延安举行的苏区党代表会议上指出：“过去我们的干部，特别是有经验的干部大批牺牲，我们要在最短期内补救这个缺陷，要训练上万的干部。”为此，中共中央于1939年2月成立了干部教育部，由张闻天任部长，李维汉任副部长。党中央和中央军委、军委总政治部，从1940年3月到1942年2月，相继发出《中央关于在职干部教育的指示》《中共中央关于延安干部学校的决定》等一系列干部教育的重要文件。党中央在文件中明确提出：“在目前条件下，干部教育工作，在全部教育工作中的比重，应该是第一位的。”这些文件还规定了干部教育的方针原则和具体措施，对加强抗战时期的干部教育起到了重要的指导作用。在抗战时期的干部教育中，共产主义思想是干部教育的指导思想。1940年1月，毛泽东在《新民主主义论》中指出：“毫无疑义，应该扩大共产主义思想的宣传，加紧马克思列宁主义的学习，没有这种宣传和学习，不但不能引导中国革命到将来的社会主义阶段上去，而且也不能指导现时的民主革命达到胜利。”强调用共产主义思想教育干部，使之具有坚定正确的政治方向，为共产主义而努力奋斗。干部教育的基本内容有四个方面：一是思想教育。毛泽东指出：“掌握思想教育，是团结全党进行伟大政治斗争的中心环节。如果这个任务不解决，党的一切政治任务是不能完成的。”在对干部的思想教育中，首先是要广大干部确立马克思主义的世界观，端正思想路线，强调一切从实际出发，理论联系实际，反对主观主义，特别是教条主义。其次是对干部进行党的宗旨教育，使党员真正从思想上入党，树立全心全意为人民服务的思想。在加强干部的思想教育中，要求大家拿起批评与自我批评的武器，开展积极的思想斗争，不断克服各种非无产阶级思想。",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第三章 抗日战争时期思想政治教育的日趋成熟 / 第二节 加强党员干部的思想政治教育 / 二、抗日战争时期党的干部教育",
+              "page": 117
+            },
+            "vector_score": 0.99,
+            "graph_score": 0.99,
+            "related_entities": [
+              "干部教育",
+              "抗日战争",
+              "中国共产党",
+              "党的重要战略任务",
+              "抗战胜利",
+              "共产主义思想",
+              "思想教育",
+              "马克思主义",
+              "思想政治教育"
+            ],
+            "graph_paths": [
+              {
+                "from": "干部教育",
+                "to": "中国共产党",
+                "hops": 1,
+                "path": [
+                  "干部教育",
+                  "中国共产党"
+                ],
+                "relations": [
+                  "关联"
+                ],
+                "path_text": "干部教育 --关联--> 中国共产党",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "中国共产党",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": false
+                  }
+                ]
+              },
+              {
+                "from": "干部教育",
+                "to": "党的重要战略任务",
+                "hops": 1,
+                "path": [
+                  "干部教育",
+                  "党的重要战略任务"
+                ],
+                "relations": [
+                  "是"
+                ],
+                "path_text": "干部教育 --是--> 党的重要战略任务",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "党的重要战略任务",
+                    "relation": "是",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "干部教育",
+                "to": "抗战胜利",
+                "hops": 1,
+                "path": [
+                  "干部教育",
+                  "抗战胜利"
+                ],
+                "relations": [
+                  "是重要保证"
+                ],
+                "path_text": "干部教育 --是重要保证--> 抗战胜利",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "抗战胜利",
+                    "relation": "是重要保证",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "干部教育",
+                "to": "共产主义思想",
+                "hops": 1,
+                "path": [
+                  "干部教育",
+                  "共产主义思想"
+                ],
+                "relations": [
+                  "以其为指导思想"
+                ],
+                "path_text": "干部教育 --以其为指导思想--> 共产主义思想",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "共产主义思想",
+                    "relation": "以其为指导思想",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "干部教育",
+                "to": "思想教育",
+                "hops": 1,
+                "path": [
+                  "干部教育",
+                  "思想教育"
+                ],
+                "relations": [
+                  "包括"
+                ],
+                "path_text": "干部教育 --包括--> 思想教育",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "思想教育",
+                    "relation": "包括",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              }
+            ],
+            "hybrid_score": 0.99
+          },
+          {
+            "id": "chunk_sizheng_v1_143",
+            "source": "中国共产党思想政治教育史",
+            "title": "加强党员干部的思想政治教育",
+            "text": "抗日战争时期的党员干部教育，在中国共产党思想政治教育史上占有极其重要的地位。中国共产党颁布了一系列重要文件，在全党范围内开展整风运动，创办了中共中央党校、抗日军政大学、陕北公学等干部教育学校，开展干部学校教育。同时，把在职干部教育放在首位。党的领导人身体力行、著书立说，投身到教育党员干部的工作之中，毛泽东的《反对自由主义》《纪念白求恩》《为人民服务》，刘少奇的《论共产党员的修养》，陈云的《怎样做一个共产党员》等，成为教育党员干部的好教材。抗日战争时期，中国共产党培养了数以百万计的高素质党员干部，为赢得抗日战争乃至解放战争的胜利提供了根本保证。",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第三章 抗日战争时期思想政治教育的日趋成熟 / 第二节 加强党员干部的思想政治教育",
+              "page": 114
+            },
+            "vector_score": 0.99,
+            "graph_score": 0.942,
+            "related_entities": [
+              "干部教育",
+              "抗日战争",
+              "中国共产党",
+              "思想政治教育"
+            ],
+            "graph_paths": [
+              {
+                "from": "干部教育",
+                "to": "中国共产党",
+                "hops": 1,
+                "path": [
+                  "干部教育",
+                  "中国共产党"
+                ],
+                "relations": [
+                  "关联"
+                ],
+                "path_text": "干部教育 --关联--> 中国共产党",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "中国共产党",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": false
+                  }
+                ]
+              },
+              {
+                "from": "干部教育",
+                "to": "思想政治教育",
+                "hops": 2,
+                "path": [
+                  "干部教育",
+                  "中国共产党",
+                  "思想政治教育"
+                ],
+                "relations": [
+                  "关联",
+                  "关联"
+                ],
+                "path_text": "干部教育 --关联--> 中国共产党 --关联--> 思想政治教育",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148",
+                  "chunk_sizheng_v1_032"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "中国共产党",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": false
+                  },
+                  {
+                    "source": "中国共产党",
+                    "target": "思想政治教育",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": false
+                  }
+                ]
+              }
+            ],
+            "hybrid_score": 0.976
+          },
+          {
+            "id": "chunk_sizheng_v1_149",
+            "source": "中国共产党思想政治教育史",
+            "title": "抗日战争时期党的干部教育（2）",
+            "text": "二是政治教育。党始终把提高干部的政治觉悟放在十分重要的地位。对干部的政治教育首先是进行阶级教育。到了抗日战争的中后期，阶级斗争变得更加突出。为加强对干部的阶级教育，1943年10月，中共中央专门发出了《关于阶级教育的通知》，要求对各级干部毫不放松地有系统地进行阶级教育。其次是进行政策和策略教育。党中央多次发出指示，要求把政策和策略教育“列入干部教育的正式课程，作为成绩考成的重要标准”。同时还加强对干部的时事教育。引导干部及时了解国际、国内发生的重要事件和战争进展等一系列重大问题。三是理论教育。在抗日战争的环境下，由于诸多原因，党的干部队伍的理论修养是很不够的，因此，党中央十分重视干部的理论教育。1942年10月，中共中央强调指出：“理论教育的成败则是革命成败的第一个关键”。抗日战争时期的整风运动，是一次全党范围内的马克思主义理论教育运动，首先是党的高中级干部和一般干部的马克思主义理论教育运动。四是业务教育与文化教育。党中央多次重申，所有干部都必须进行业务教育，实行“做什么，学什么”。与此同时，针对相当多的干部文化水平不高的现状，党中央要求文化程度低的干部，必须进行文化知识的学习，进行识字和读书的工作，不断提高自己的文化知识水平。党对干部业务与文化教育的加强，提高了广大干部的业务能力和文化水平，一大批业务精、政治强的高素质干部全面成长起来。",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第三章 抗日战争时期思想政治教育的日趋成熟 / 第二节 加强党员干部的思想政治教育 / 二、抗日战争时期党的干部教育",
+              "page": 118
+            },
+            "vector_score": 0.99,
+            "graph_score": 0.942,
+            "related_entities": [
+              "干部教育",
+              "抗日战争",
+              "马克思主义",
+              "思想政治教育"
+            ],
+            "graph_paths": [
+              {
+                "from": "干部教育",
+                "to": "马克思主义",
+                "hops": 2,
+                "path": [
+                  "干部教育",
+                  "中国共产党",
+                  "马克思主义"
+                ],
+                "relations": [
+                  "关联",
+                  "以其为行动指南"
+                ],
+                "path_text": "干部教育 --关联--> 中国共产党 --以其为行动指南--> 马克思主义",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148",
+                  "chunk_sizheng_v1_028"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "中国共产党",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": false
+                  },
+                  {
+                    "source": "中国共产党",
+                    "target": "马克思主义",
+                    "relation": "以其为行动指南",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_028"
+                    ],
+                    "original_direction": true
+                  }
+                ]
+              },
+              {
+                "from": "干部教育",
+                "to": "思想政治教育",
+                "hops": 2,
+                "path": [
+                  "干部教育",
+                  "中国共产党",
+                  "思想政治教育"
+                ],
+                "relations": [
+                  "关联",
+                  "关联"
+                ],
+                "path_text": "干部教育 --关联--> 中国共产党 --关联--> 思想政治教育",
+                "source_chunk_ids": [
+                  "chunk_sizheng_v1_148",
+                  "chunk_sizheng_v1_032"
+                ],
+                "edges": [
+                  {
+                    "source": "干部教育",
+                    "target": "中国共产党",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_148"
+                    ],
+                    "original_direction": false
+                  },
+                  {
+                    "source": "中国共产党",
+                    "target": "思想政治教育",
+                    "relation": "关联",
+                    "source_chunk_ids": [
+                      "chunk_sizheng_v1_032"
+                    ],
+                    "original_direction": false
+                  }
+                ]
+              }
+            ],
+            "hybrid_score": 0.976
+          }
+        ],
+        "answer": "生成服务当前不可用，以下内容仅为检索证据摘要，不作为完整自然语言回答：\n- 证据 1：毛泽东指出：“政治路线确定之后，干部就是决定的因素。”因此，在抗日战争时期，中国共产党特别重视干部教育，把培养教育干部看作是党的重要战略任务，是夺取抗战胜利的重要保证。1937年5月，刘少奇在延安举行的苏区党代表会议上指出：“过去我们的干部，特别是有经验的干部大批牺牲，我们要在最短期内补救这个缺陷，要训练上万的干部。”为此，中共中央于1939年2月成立了干部教育部，由张闻天任部长，李维汉任副部长。党中央和中央军委、军委总政治部，从1940年3月到1942年2月，相继发出《中央关于在职干部教育的指示》《中共中央关于延安干部学校的决定》等一系列干部教育的重要文件。\n- 证据 2：抗日战争时期的党员干部教育，在中国共产党思想政治教育史上占有极其重要的地位。中国共产党颁布了一系列重要文件，在全党范围内开展整风运动，创办了中共中央党校、抗日军政大学、陕北公学等干部教育学校，开展干部学校教育。同时，把在职干部教育放在首位。党的领导人身体力行、著书立说，投身到教育党员干部的工作之中，毛泽东的《反对自由主义》《纪念白求恩》《为人民服务》，刘少奇的《论共产党员的修养》，陈云的《怎样做一个共产党员》等，成为教育党员干部的好教材。抗日战争时期，中国共产党培养了数以百万计的高素质党员干部，为赢得抗日战争乃至解放战争的胜利提供了根本保证。\n- 证据 3：二是政治教育。党始终把提高干部的政治觉悟放在十分重要的地位。对干部的政治教育首先是进行阶级教育。到了抗日战争的中后期，阶级斗争变得更加突出。为加强对干部的阶级教育，1943年10月，中共中央专门发出了《关于阶级教育的通知》，要求对各级干部毫不放松地有系统地进行阶级教育。其次是进行政策和策略教育。党中央多次发出指示，要求把政策和策略教育“列入干部教育的正式课程，作为成绩考成的重要标准”。同时还加强对干部的时事教育。引导干部及时了解国际、国内发生的重要事件和战争进展等一系列重大问题。三是理论教育。在抗日战争的环境下，由于诸多原因，党的干部队伍的理论修养是很不够的，因此，党中央十分重视干部的理论教育。\n\n引用依据：\n1. 抗日战争时期党的干部教育：来源：《中国共产党思想政治教育史》，第三章 抗日战争时期思想政治教育的日趋成熟 / 第二节 加强党员干部的思想政治教育 / 二、抗日战争时期党的干部教育，PDF 页码 117\n2. 加强党员干部的思想政治教育：来源：《中国共产党思想政治教育史》，第三章 抗日战争时期思想政治教育的日趋成熟 / 第二节 加强党员干部的思想政治教育，PDF 页码 114\n3. 抗日战争时期党的干部教育（2）：来源：《中国共产党思想政治教育史》，第三章 抗日战争时期思想政治教育的日趋成熟 / 第二节 加强党员干部的思想政治教育 / 二、抗日战争时期党的干部教育，PDF 页码 118\n\n以上内容仅依据当前检索到的证据整理，仅为检索证据摘要，请在生成服务恢复后重新生成完整回答。",
+        "citations_used": [
+          {
+            "id": "chunk_sizheng_v1_148",
+            "title": "抗日战争时期党的干部教育",
+            "source": "中国共产党思想政治教育史",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第三章 抗日战争时期思想政治教育的日趋成熟 / 第二节 加强党员干部的思想政治教育 / 二、抗日战争时期党的干部教育",
+              "page": 117
+            },
+            "hybrid_score": 0.99
+          },
+          {
+            "id": "chunk_sizheng_v1_143",
+            "title": "加强党员干部的思想政治教育",
+            "source": "中国共产党思想政治教育史",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第三章 抗日战争时期思想政治教育的日趋成熟 / 第二节 加强党员干部的思想政治教育",
+              "page": 114
+            },
+            "hybrid_score": 0.976
+          },
+          {
+            "id": "chunk_sizheng_v1_149",
+            "title": "抗日战争时期党的干部教育（2）",
+            "source": "中国共产党思想政治教育史",
+            "citation": {
+              "doc": "中国共产党思想政治教育史",
+              "section": "第三章 抗日战争时期思想政治教育的日趋成熟 / 第二节 加强党员干部的思想政治教育 / 二、抗日战争时期党的干部教育",
+              "page": 118
+            },
+            "hybrid_score": 0.976
+          }
+        ],
+        "generator_mode": "template",
+        "generator_provider": "template",
+        "provider_status": "template_evidence_summary",
+        "used_fallback": true,
+        "source_check": {
+          "status": "pass",
+          "issues": [],
+          "checked_citation_count": 3
+        },
+        "policy_check": {
+          "status": "warning",
+          "risk_types": [
+            "historical_context_needs_review"
+          ],
+          "issues": [
+            "回答涉及需要谨慎处理的历史语境：['阶级斗争', '政治路线']。建议专家抽样复核。"
+          ],
+          "review_required": true,
+          "max_severity": "medium",
+          "review_items": [
+            {
+              "risk_type": "historical_context_needs_review",
+              "dimension": "historical_context",
+              "severity": "medium",
+              "reason": "回答涉及需要谨慎处理的历史语境：['阶级斗争', '政治路线']。建议专家抽样复核。",
+              "suggestion": "补充历史阶段、对象和材料依据，避免脱离语境概括。",
+              "expert_focus": "请专家确认历史语境和表述边界是否稳妥。"
+            }
+          ],
+          "suggestion": "建议保留研究生初标与赵老师抽样校准机制。",
+          "feedback_collection": {
+            "stage": "rule_seed",
+            "recommended_reviewer": "低风险样例由研究生或组员初标，高风险和争议样例交赵老师校准。",
+            "expert_review_priority": "medium",
+            "review_dimensions": [
+              {
+                "id": "evidence_alignment",
+                "name": "证据支撑",
+                "description": "判断回答中的结论是否能被当前 citation 证据支撑。"
+              },
+              {
+                "id": "citation_integrity",
+                "name": "溯源完整性",
+                "description": "判断 citation 的文献、章节、页码是否足够完整。"
+              },
+              {
+                "id": "expression_safety",
+                "name": "表述稳妥性",
+                "description": "判断是否存在绝对化、扩大化或不够严谨的政治表述。"
+              },
+              {
+                "id": "historical_context",
+                "name": "历史语境",
+                "description": "判断回答是否交代清楚历史阶段、对象和语境。"
+              },
+              {
+                "id": "mobilization_completeness",
+                "name": "政治动员完整性",
+                "description": "判断政治动员、鼓舞士气等回答是否覆盖理想信念、组织纪律、宣传鼓动和生活关怀等必要维度。"
+              },
+              {
+                "id": "expert_feedback",
+                "name": "专家反馈",
+                "description": "记录赵老师或研究生标注时关注的审查理由。"
+              }
+            ],
+            "label_options": [
+              "通过",
+              "证据不足",
+              "表述不够稳妥",
+              "历史语境不清",
+              "政治动员维度不全",
+              "结论超出材料",
+              "需要专家复核"
+            ],
+            "decision_options": [
+              "通过",
+              "需要修改",
+              "需要专家复核",
+              "不能输出"
+            ],
+            "required_fields": [
+              "decision",
+              "reason",
+              "corrected_suggestion"
+            ]
+          }
+        },
+        "agent_trace": [
+          {
+            "agent": "retrieval_stage",
+            "role": "证据检索中枢",
+            "status": "pass",
+            "summary": {
+              "query_entities_count": 2,
+              "hybrid_hits_count": 3
+            }
+          },
+          {
+            "agent": "generator",
+            "role": "生成智能体",
+            "status": "pass",
+            "summary": {
+              "generator_mode": "template",
+              "citations_used_count": 3
+            }
+          },
+          {
+            "agent": "source_reviewer",
+            "role": "溯源审查智能体",
+            "status": "pass",
+            "summary": {
+              "checked_citation_count": 3,
+              "issue_count": 0
+            }
+          },
+          {
+            "agent": "policy_reviewer",
+            "role": "政治红线审查智能体",
+            "status": "warning",
+            "summary": {
+              "review_required": true,
+              "max_severity": "medium",
+              "risk_types": [
+                "historical_context_needs_review"
+              ]
+            }
+          }
+        ],
+        "final_decision": {
+          "status": "needs_review",
+          "can_output": false,
+          "review_required": true,
+          "reason": "政治红线初筛提示需要人工复核。"
+        },
+        "display_route": {
+          "intent_type": "knowledge_qa",
+          "target_grade": "university",
+          "presentation_mode": "evidence_cards",
+          "timeline_ids": [],
+          "landmark_ids": [],
+          "narrative_character": null
+        }
+      }
+    },
+    {
+      "request": {
+        "query": "量子芯片如何纠错？",
+        "target_grade": "university"
+      },
+      "response": {
+        "status": "success",
+        "project": "多智能体赋能的跨模态零幻觉交互式思政教育系统",
+        "query": "量子芯片如何纠错？",
+        "query_entities": [],
+        "vector_hits": [],
+        "graph_hits": [],
+        "hybrid_hits": [],
+        "answer": "当前知识库中没有检索到足够证据，暂不生成回答。请补充资料或换一个问题。",
+        "citations_used": [],
+        "generator_mode": "template",
+        "generator_provider": "template",
+        "provider_status": "template_evidence_summary",
+        "used_fallback": true,
+        "source_check": {
+          "status": "no_evidence",
+          "issues": [
+            "当前回答没有可用 citation，系统应保持不生成或提示证据不足。"
+          ],
+          "checked_citation_count": 0
+        },
+        "policy_check": {
+          "status": "need_review",
+          "risk_types": [
+            "evidence_missing"
+          ],
+          "issues": [
+            "当前回答缺少可用证据支撑，不建议直接输出。"
+          ],
+          "review_required": true,
+          "max_severity": "high",
+          "review_items": [
+            {
+              "risk_type": "evidence_missing",
+              "dimension": "evidence_alignment",
+              "severity": "high",
+              "reason": "当前回答缺少可用证据支撑，不建议直接输出。",
+              "suggestion": "请补充检索证据，或交由人工复核。",
+              "expert_focus": "请确认该问题是否需要补充资料后再回答。"
+            }
+          ],
+          "suggestion": "请补充检索证据，或交由人工复核。",
+          "feedback_collection": {
+            "stage": "student_initial_label",
+            "recommended_reviewer": "研究生或项目组员先初标，赵老师抽样校准。",
+            "expert_review_priority": "high",
+            "review_dimensions": [
+              {
+                "id": "evidence_alignment",
+                "name": "证据支撑",
+                "description": "判断回答中的结论是否能被当前 citation 证据支撑。"
+              },
+              {
+                "id": "citation_integrity",
+                "name": "溯源完整性",
+                "description": "判断 citation 的文献、章节、页码是否足够完整。"
+              },
+              {
+                "id": "expression_safety",
+                "name": "表述稳妥性",
+                "description": "判断是否存在绝对化、扩大化或不够严谨的政治表述。"
+              },
+              {
+                "id": "historical_context",
+                "name": "历史语境",
+                "description": "判断回答是否交代清楚历史阶段、对象和语境。"
+              },
+              {
+                "id": "mobilization_completeness",
+                "name": "政治动员完整性",
+                "description": "判断政治动员、鼓舞士气等回答是否覆盖理想信念、组织纪律、宣传鼓动和生活关怀等必要维度。"
+              },
+              {
+                "id": "expert_feedback",
+                "name": "专家反馈",
+                "description": "记录赵老师或研究生标注时关注的审查理由。"
+              }
+            ],
+            "label_options": [
+              "通过",
+              "证据不足",
+              "表述不够稳妥",
+              "历史语境不清",
+              "政治动员维度不全",
+              "结论超出材料",
+              "需要专家复核"
+            ],
+            "decision_options": [
+              "通过",
+              "需要修改",
+              "需要专家复核",
+              "不能输出"
+            ],
+            "required_fields": [
+              "decision",
+              "reason",
+              "corrected_suggestion"
+            ]
+          }
+        },
+        "agent_trace": [
+          {
+            "agent": "retrieval_stage",
+            "role": "证据检索中枢",
+            "status": "no_evidence",
+            "summary": {
+              "query_entities_count": 0,
+              "hybrid_hits_count": 0
+            }
+          },
+          {
+            "agent": "generator",
+            "role": "生成智能体",
+            "status": "pass",
+            "summary": {
+              "generator_mode": "template",
+              "citations_used_count": 0
+            }
+          },
+          {
+            "agent": "source_reviewer",
+            "role": "溯源审查智能体",
+            "status": "no_evidence",
+            "summary": {
+              "checked_citation_count": 0,
+              "issue_count": 1
+            }
+          },
+          {
+            "agent": "policy_reviewer",
+            "role": "政治红线审查智能体",
+            "status": "need_review",
+            "summary": {
+              "review_required": true,
+              "max_severity": "high",
+              "risk_types": [
+                "evidence_missing"
+              ]
+            }
+          }
+        ],
+        "final_decision": {
+          "status": "blocked",
+          "can_output": false,
+          "review_required": true,
+          "reason": "缺少可用证据或溯源检查未通过。"
+        },
+        "display_route": {
+          "intent_type": "knowledge_qa",
+          "target_grade": "university",
+          "presentation_mode": "evidence_cards",
+          "timeline_ids": [],
+          "landmark_ids": [],
+          "narrative_character": null
+        }
+      }
+    }
+  ]
+}
