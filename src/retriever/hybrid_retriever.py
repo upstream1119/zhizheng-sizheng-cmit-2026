@@ -239,6 +239,15 @@ def _score_specific_entity_matches(
     return min(score, 0.12)
 
 
+def _select_retrieval_entities(query_entities: list[str]) -> list[str]:
+    document_count = len(_load_demo_knowledge_base())
+    focused_entities = [
+        entity for entity in query_entities
+        if 0 < _entity_document_frequency(entity) < document_count
+    ]
+    return focused_entities or query_entities
+
+
 def _relation_weight(relation: str) -> float:
     for relation_type, weight in RELATION_TYPE_WEIGHTS.items():
         if relation_type in relation:
@@ -529,9 +538,17 @@ def retrieve(query: str, target_grade: str | None = None) -> dict:
         # 标准双路召回流水线：
         knowledge_base = _load_demo_knowledge_base()
         query_entities = extract_query_entities(query_text)
-        vector_hits = retrieve_vector(query_text, query_entities)
+        retrieval_entities = _select_retrieval_entities(query_entities)
+        vector_hits = retrieve_vector(query_text, retrieval_entities)
         graph_hits = retrieve_graph(query_entities)
         hybrid_hits = fuse_results(vector_hits, graph_hits, knowledge_base)
+        if retrieval_entities != query_entities:
+            hybrid_hits = [
+                hit for hit in hybrid_hits
+                if _matched_entities(
+                    retrieval_entities, _build_search_content(hit)
+                )
+            ]
     else:
         query_entities = []
         vector_hits, graph_hits, hybrid_hits = [], [], []

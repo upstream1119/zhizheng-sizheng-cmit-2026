@@ -92,6 +92,39 @@ def test_demo_queries_return_expected_evidence(monkeypatch):
             assert citation["citation"].get("section"), case["id"]
 
 
+def test_specific_event_queries_keep_relevant_citations(monkeypatch):
+    monkeypatch.setenv("DACHUANG_RETRIEVE_MODE", "mock")
+    monkeypatch.setenv("DACHUANG_LOCAL_MOCK_ACK", "1")
+    monkeypatch.setenv("DACHUANG_GENERATOR_MODE", "template")
+    monkeypatch.delenv("DACHUANG_VECTOR_BACKEND", raising=False)
+
+    for query in (
+        "遵义会议后的思想政治教育有哪些作用？",
+        "遵义会议",
+        "遵义会议精神如何统一党和部队的思想？",
+    ):
+        result = retrieve(query, target_grade="university")
+        assert result["query_entities"] == hybrid_retriever.extract_query_entities(query)
+        assert result["hybrid_hits"][0]["id"] == "chunk_sizheng_v1_111"
+        assert result["citations_used"]
+        hits = {hit["id"]: hit for hit in result["hybrid_hits"]}
+        for citation in result["citations_used"]:
+            hit = hits[citation["id"]]
+            assert "遵义会议" in f"{hit['title']} {hit['text']}"
+
+
+def test_general_education_query_keeps_available_evidence(monkeypatch):
+    monkeypatch.setenv("DACHUANG_RETRIEVE_MODE", "mock")
+    monkeypatch.setenv("DACHUANG_LOCAL_MOCK_ACK", "1")
+    monkeypatch.setenv("DACHUANG_GENERATOR_MODE", "template")
+    monkeypatch.delenv("DACHUANG_VECTOR_BACKEND", raising=False)
+
+    result = retrieve("思想政治教育为什么重要？")
+    assert len(result["hybrid_hits"]) >= 3
+    assert result["citations_used"]
+    assert result["final_decision"]["status"] == "approved"
+
+
 def test_cadre_education_query_prioritizes_specific_chunk(monkeypatch):
     monkeypatch.setenv("DACHUANG_RETRIEVE_MODE", "mock")
     monkeypatch.setenv("DACHUANG_LOCAL_MOCK_ACK", "1")

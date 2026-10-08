@@ -43,7 +43,7 @@ git switch -c <下方对应的任务分支>
 ## 三、B01｜彭意涵：修正主题检索并提供响应样例
 
 分支：feat/b01-topic-retrieval
-状态：未开始；根因已有只读诊断证据。
+状态：进行中；本步聚焦实体召回与证据筛选，响应样例仍待交付。
 入口：src/retriever/hybrid_retriever.py、
 tests/test_retrieve.py、src/reviewer/source_checker.py。
 
