@@ -85,13 +85,29 @@ def build_evidence_prompt(query: str, hybrid_hits: list[dict], max_hits: int = 3
     )
 
 
-def _validate_llm_answer(answer: str) -> list[str]:
+def _extract_citation_numbers(text: str) -> list[str]:
+    return list(dict.fromkeys(re.findall(r"\[([0-9]+)\]", text)))
+
+
+def _validate_llm_answer(answer: str, evidence_count: int) -> list[str]:
     text = (answer or "").strip()
+    parts = re.split(r"(?:资料)?来源：", text, maxsplit=1)
+    body_numbers = _extract_citation_numbers(parts[0])
+    source_numbers = (
+        _extract_citation_numbers(parts[1]) if len(parts) == 2 else []
+    )
+    allowed_numbers = {
+        str(index) for index in range(1, evidence_count + 1)
+    }
     issues = []
     if len(text) < MIN_LLM_ANSWER_LENGTH:
         issues.append("模型回答过短，不能视为完整回答。")
-    if "[1]" not in text:
+    if not body_numbers:
         issues.append("模型回答缺少行内证据编号。")
+    if set(_extract_citation_numbers(text)) - allowed_numbers:
+        issues.append("模型回答包含不属于本次证据的编号。")
+    if set(body_numbers) != set(source_numbers):
+        issues.append("模型回答正文与来源列表的证据编号不一致。")
     if not any(marker in text for marker in SOURCE_MARKERS):
         issues.append("模型回答缺少来源说明。")
     if text.endswith(INCOMPLETE_ENDINGS):
@@ -146,12 +162,25 @@ def generate_answer(query: str, hybrid_hits: list[dict]) -> dict:
 
         if provider_result.status == "success" and provider_result.text.strip():
             candidate_answer = _ensure_evidence_boundary(provider_result.text)
-            quality_issues = _validate_llm_answer(candidate_answer)
+            quality_issues = _validate_llm_answer(
+                candidate_answer, len(selected_hits)
+            )
             if quality_issues:
                 generated["used_fallback"] = True
                 provider_status = "invalid_response"
             else:
                 generated["answer"] = candidate_answer
+                body = re.split(
+                    r"(?:资料)?来源：", candidate_answer, maxsplit=1
+                )[0]
+                cited_ids = {
+                    selected_hits[int(number) - 1]["id"]
+                    for number in _extract_citation_numbers(body)
+                }
+                generated["citations_used"] = [
+                    citation for citation in generated["citations_used"]
+                    if citation["id"] in cited_ids
+                ]
                 generated["used_fallback"] = False
                 provider_status = provider_result.status
         else:

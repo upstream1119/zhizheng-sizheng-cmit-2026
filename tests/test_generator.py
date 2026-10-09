@@ -1,3 +1,5 @@
+import pytest
+
 from src.generator import evidence_generator
 from src.generator.evidence_generator import generate_answer
 from src.generator.llm_provider import LLMGenerationResult
@@ -297,3 +299,60 @@ def test_template_answer_keeps_closing_quote_when_truncated(monkeypatch):
 
     assert "“这是一句带有完整中文引号的关键论述。”" in result["answer"]
     assert "后续补充说明较长，后续补充说明较长" not in result["answer"]
+
+@pytest.mark.parametrize(
+    ("body_refs", "source_refs", "accepted"),
+    [
+        ("[1]", "[1]", True),
+        ("[2]", "[2]", True),
+        ("[1][99]", "[1][99]", False),
+        ("[0]", "[0]", False),
+        ("[01]", "[01]", False),
+        ("", "[1]", False),
+        ("[1]", "[2]", False),
+        ("[1]", "[1][2]", False),
+    ],
+)
+def test_llm_citation_numbers_match_current_evidence(
+    body_refs, source_refs, accepted
+):
+    answer = (
+        "仅依据当前检索到的证据，解释历史问题需要核查材料，"
+        "区分材料直接说明的内容与仍需进一步验证的推断。" * 4
+        + body_refs
+        + "\n\n来源：" + source_refs + "测试资料。"
+    )
+    issues = evidence_generator._validate_llm_answer(answer, 2)
+    assert (not issues) is accepted
+
+
+def test_llm_citations_used_contains_only_body_references(monkeypatch):
+    answer = (
+        "仅依据当前检索到的证据，思想政治教育需要结合具体材料展开，"
+        "阅读者应核查原文并据此形成解释。" * 4
+        + "[2]\n\n来源：[2]《中国共产党思想政治教育史》，"
+        "测试章节，PDF 页码 1。"
+    )
+
+    class SuccessfulProvider:
+        name = "stub"
+
+        def generate(self, prompt: str) -> LLMGenerationResult:
+            return LLMGenerationResult(
+                text=answer, provider_name=self.name, status="success"
+            )
+
+    monkeypatch.setenv("DACHUANG_GENERATOR_MODE", "llm")
+    monkeypatch.setattr(
+        evidence_generator,
+        "get_llm_provider",
+        lambda provider_name: SuccessfulProvider(),
+    )
+    result = generate_answer(
+        "思想政治教育",
+        [_hit(), _hit(hit_id="chunk_test_002")],
+    )
+    assert result["used_fallback"] is False
+    assert [item["id"] for item in result["citations_used"]] == [
+        "chunk_test_002"
+    ]
