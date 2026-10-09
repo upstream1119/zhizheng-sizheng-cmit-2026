@@ -113,6 +113,27 @@ def test_specific_event_queries_keep_relevant_citations(monkeypatch):
             assert "遵义会议" in f"{hit['title']} {hit['text']}"
 
 
+def test_long_march_summary_keeps_spirit_evidence(monkeypatch):
+    monkeypatch.setenv("DACHUANG_RETRIEVE_MODE", "mock")
+    monkeypatch.setenv("DACHUANG_LOCAL_MOCK_ACK", "1")
+    monkeypatch.setenv("DACHUANG_GENERATOR_MODE", "template")
+    monkeypatch.delenv("DACHUANG_VECTOR_BACKEND", raising=False)
+
+    result = retrieve("长征形成了什么精神？", target_grade="university")
+    assert "革命英雄主义" in result["answer"]
+    assert "革命乐观主义" in result["answer"]
+    assert "仅为检索证据摘要" in result["answer"]
+    cited_ids = {item["id"] for item in result["citations_used"]}
+    cited_hits = [
+        hit for hit in result["hybrid_hits"] if hit["id"] in cited_ids
+    ]
+    assert any(
+        "革命英雄主义" in hit["text"]
+        and "革命乐观主义" in hit["text"]
+        for hit in cited_hits
+    )
+
+
 def test_general_education_query_keeps_available_evidence(monkeypatch):
     monkeypatch.setenv("DACHUANG_RETRIEVE_MODE", "mock")
     monkeypatch.setenv("DACHUANG_LOCAL_MOCK_ACK", "1")
