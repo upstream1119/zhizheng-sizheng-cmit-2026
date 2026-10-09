@@ -3,6 +3,8 @@
 > 2026 数媒竞赛参赛工程：智证思政——基于知识图谱与证据审查的可信AI交互式教育系统。
 > 当前运行、验收与三人协作说明见
 > [参赛工程指南](docs/competition_bootstrap.md)。
+> B01检索修复与三类真实响应已通过PR #2合并（179a634）。
+> 当前任务与交接见[开发任务看板](docs/competition_task_board.md)。
 > 原项目来源及贡献见
 > [迁移记录](docs/migration_provenance.md)。
 
