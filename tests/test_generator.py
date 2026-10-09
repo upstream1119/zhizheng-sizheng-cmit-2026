@@ -1,6 +1,44 @@
 from src.generator import evidence_generator
 from src.generator.evidence_generator import generate_answer
 from src.generator.llm_provider import LLMGenerationResult
+from src.generator.template_generator import (
+    _select_query_excerpt,
+    _shorten_text,
+)
+
+
+def test_excerpt_keeps_relevant_tail_and_adjacent_context():
+    prefix = "这段材料介绍资料整理与平台维护。" * 30
+    context = "组织动员帮助队伍克服困难。"
+    conclusion = "材料强调：“团结协作精神源于共同实践。”"
+    text = prefix + context + conclusion
+
+    excerpt = _select_query_excerpt("团结协作精神源于什么？", text)
+
+    assert context in excerpt
+    assert conclusion in excerpt
+    assert excerpt in text
+    assert len(excerpt) <= 320
+
+
+def test_excerpt_preserves_short_text_and_unmatched_fallback():
+    short = "教育需要结合具体材料。"
+    assert _select_query_excerpt("教育", short) == short
+    long = "资料整理需要检查编号。" * 40
+    assert _select_query_excerpt("量子纠错", long) == _shorten_text(long)
+
+
+def test_excerpt_preserves_consecutive_sentence_marks():
+    text = "背景说明。" * 90 + "真的吗？！长征精神体现坚定信念。"
+    excerpt = _select_query_excerpt("长征精神坚定信念", text)
+    assert "真的吗？！" in excerpt
+    assert excerpt in text
+
+
+def test_excerpt_keeps_an_oversized_relevant_sentence_complete():
+    sentence = "团结协作精神体现为" + "共同实践" * 90 + "。"
+    text = "背景资料与平台维护。" * 40 + sentence
+    assert _select_query_excerpt("团结协作精神", text) == sentence
 
 
 def _hit(

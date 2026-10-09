@@ -56,6 +56,48 @@ def _query_overlap_score(query_grams: set[str], hit: dict) -> float:
     return matched / len(query_grams)
 
 
+def _select_query_excerpt(
+    query: str,
+    text: str,
+    limit: int = ANSWER_SNIPPET_LIMIT,
+) -> str:
+    text = " ".join((text or "").split())
+    if len(text) <= limit:
+        return text
+
+    sentences = re.findall(
+        r"[^。！？]+[。！？]+[”’」』》）)]*|[^。！？]+$",
+        text,
+    )
+    query_grams = _query_ngrams(query)
+    if not sentences or not query_grams:
+        return _shorten_text(text, limit)
+
+    scores = [
+        _query_overlap_score(query_grams, {"text": sentence})
+        for sentence in sentences
+    ]
+    best = max(range(len(sentences)), key=lambda index: scores[index])
+    prefix = _shorten_text(text, limit)
+    prefix_score = _query_overlap_score(query_grams, {"text": prefix})
+    if scores[best] <= prefix_score:
+        return prefix
+
+    start = end = best
+    excerpt = sentences[best]
+    # 保留相邻上下文，不拼接不连续的原文。
+    if start > 0 and len(sentences[start - 1] + excerpt) <= limit:
+        start -= 1
+        excerpt = sentences[start] + excerpt
+    while end + 1 < len(sentences):
+        candidate = excerpt + sentences[end + 1]
+        if len(candidate) > limit:
+            break
+        end += 1
+        excerpt = candidate
+    return excerpt
+
+
 def select_answer_hits(query: str, hybrid_hits: list[dict], max_hits: int) -> list[dict]:
     usable_hits = []
     for hit in hybrid_hits:
@@ -120,7 +162,7 @@ def generate_answer_from_hits(
 
     evidence_lines = []
     for index, hit in enumerate(selected_hits, start=1):
-        text = _shorten_text(hit.get("text", ""))
+        text = _select_query_excerpt(query, hit.get("text", ""))
         evidence_lines.append(f"- 证据 {index}：{text}")
 
     answer = (
