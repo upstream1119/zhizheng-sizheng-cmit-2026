@@ -3,7 +3,7 @@
 作品：智证思政——基于知识图谱与证据审查的可信AI交互式教育系统。
 主题：从遵义会议到长征精神：沿着证据理解历史。
 初始化基线：main@451fab9。
-当前代码交接基线：main@179a634（PR #2已合并）。
+当前代码交接基线：main@59149b2（PR #2、PR #4已合并）。
 仓库：https://github.com/upstream1119/zhizheng-sizheng-cmit-2026
 运行指南：https://github.com/upstream1119/zhizheng-sizheng-cmit-2026/blob/main/docs/competition_bootstrap.md
 
@@ -64,8 +64,9 @@ tests/test_retrieve.py、src/reviewer/source_checker.py。
 验证证据：[PR #2](https://github.com/upstream1119/zhizheng-sizheng-cmit-2026/pull/2)；
 [B01说明](https://github.com/upstream1119/zhizheng-sizheng-cmit-2026/blob/main/docs/acceptance/b01_retrieval_notes.md)。
 后端106项测试通过；三类真实响应通过前端契约校验。
-后续摘要修复：PR #4（草稿、待复核），分支feat/b02-query-excerpts。
+后续摘要修复：PR #4已合并，合并提交59149b2。
 后端110项测试通过；长征精神关键句保留且对应连续原文。
+最终后端111项测试通过；连续标点遗漏已修复，120种组合验证通过。
 完整教学回答仍待验收；F01、D01继续基于已合并main开展工作。
 
 交付：
