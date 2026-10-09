@@ -28,6 +28,13 @@ def test_excerpt_preserves_short_text_and_unmatched_fallback():
     assert _select_query_excerpt("量子纠错", long) == _shorten_text(long)
 
 
+def test_excerpt_preserves_consecutive_sentence_marks():
+    text = "背景说明。" * 90 + "真的吗？！长征精神体现坚定信念。"
+    excerpt = _select_query_excerpt("长征精神坚定信念", text)
+    assert "真的吗？！" in excerpt
+    assert excerpt in text
+
+
 def test_excerpt_keeps_an_oversized_relevant_sentence_complete():
     sentence = "团结协作精神体现为" + "共同实践" * 90 + "。"
     text = "背景资料与平台维护。" * 40 + sentence

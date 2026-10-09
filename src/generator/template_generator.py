@@ -66,7 +66,7 @@ def _select_query_excerpt(
         return text
 
     sentences = re.findall(
-        r"[^。！？]+[。！？][”’」』》）)]*|[^。！？]+$",
+        r"[^。！？]+[。！？]+[”’」』》）)]*|[^。！？]+$",
         text,
     )
     query_grams = _query_ngrams(query)
