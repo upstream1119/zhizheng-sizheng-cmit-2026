@@ -1,5 +1,9 @@
 # 多智能体赋能的跨模态零幻觉交互式思政教育系统 - 开发指南
 
+> 本文保留原工程说明；2026参赛版环境、运行方式与当前进度请先看
+> [参赛工程指南](docs/competition_bootstrap.md)及
+> [开发任务看板](docs/competition_task_board.md)。
+
 ## ⚙️ 1. 环境准备（当前：Windows 本地试运行）
 确保你已经安装 Conda，并在 PowerShell 执行：
 ```powershell

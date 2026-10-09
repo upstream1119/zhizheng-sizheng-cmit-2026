@@ -3,6 +3,7 @@
 作品：智证思政——基于知识图谱与证据审查的可信AI交互式教育系统。
 主题：从遵义会议到长征精神：沿着证据理解历史。
 初始化基线：main@451fab9。
+当前代码交接基线：main@179a634（PR #2已合并）。
 仓库：https://github.com/upstream1119/zhizheng-sizheng-cmit-2026
 运行指南：https://github.com/upstream1119/zhizheng-sizheng-cmit-2026/blob/main/docs/competition_bootstrap.md
 
@@ -43,7 +44,7 @@ git switch -c <下方对应的任务分支>
 ## 三、B01｜彭意涵：修正主题检索并提供响应样例
 
 分支：feat/b01-topic-retrieval
-状态：进行中；检索修复与三类响应样例已交付，待前端联调及教学问答验收。
+状态：待联调；PR #2已合并，检索修复与三类响应样例已交付，教学问答仍待验收。
 入口：src/retriever/hybrid_retriever.py、
 tests/test_retrieve.py、src/reviewer/source_checker.py。
 
@@ -61,7 +62,7 @@ tests/test_retrieve.py、src/reviewer/source_checker.py。
       记录请求、运行模式、生成方式及触发条件。
 
 验证证据：[PR #2](https://github.com/upstream1119/zhizheng-sizheng-cmit-2026/pull/2)；
-[B01说明](https://github.com/upstream1119/zhizheng-sizheng-cmit-2026/blob/feat/b01-topic-retrieval/docs/acceptance/b01_retrieval_notes.md)。
+[B01说明](https://github.com/upstream1119/zhizheng-sizheng-cmit-2026/blob/main/docs/acceptance/b01_retrieval_notes.md)。
 后端106项测试通过；三类真实响应通过前端契约校验。
 
 交付：
@@ -82,7 +83,7 @@ tests/test_retrieve.py、src/reviewer/source_checker.py。
 ## 四、F01｜严欣浩：完成问答与证据阅读
 
 分支：feat/f01-evidence-reading
-状态：未开始；可先用现有前端样例开发，最终使用B01样例联调。
+状态：未开始；B01样例已进入main，可开始证据阅读与门控联调。
 入口：web/src/App.tsx、web/index.html、
 web/src/components/SharedEvidencePanel.tsx、
 web/src/types/backend.ts、web/src/components/DecisionGate.tsx。
@@ -118,7 +119,7 @@ web/src/types/backend.ts、web/src/components/DecisionGate.tsx。
 ## 五、D01｜徐若诚：复核事件资料与建立验收题单
 
 分支：docs/d01-assets-acceptance
-状态：未开始；资料复核可独立开展，最终端到端执行依赖B01和F01。
+状态：未开始；可开展独立启动、资料复核与题单准备，最终端到端执行依赖F01。
 入口：data/processed/timeline_demo_sizheng.json、
 data/processed/landmarks_demo.geojson、
 data/processed/text_chunks_sizheng_v1.jsonl、

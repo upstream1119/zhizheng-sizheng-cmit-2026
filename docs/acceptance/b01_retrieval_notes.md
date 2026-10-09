@@ -2,6 +2,8 @@
 
 主题：从遵义会议到长征精神：沿着证据理解历史。
 任务分支：feat/b01-topic-retrieval。
+状态：PR #2已合并；合并提交179a634。
+后续由F01联调，完整教学回答与整体验收继续单独记录。
 代码与验证交付：[PR #2](https://github.com/upstream1119/zhizheng-sizheng-cmit-2026/pull/2)。
 
 ## 修改理由与前后结果

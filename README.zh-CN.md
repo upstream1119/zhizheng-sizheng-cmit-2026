@@ -1,5 +1,9 @@
 # Traceable Ideological Education RAG
 
+> 本文保留原工程说明；2026参赛版环境、运行方式与当前进度请先看
+> [参赛工程指南](docs/competition_bootstrap.md)及
+> [开发任务看板](docs/competition_task_board.md)。
+
 [English README](./README.md)
 
 面向思政教育的可溯源 KG-RAG 系统，关注 Citation 溯源、多智能体审查、政治安全审查和跨模态学习交互。
